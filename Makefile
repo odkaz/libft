@@ -11,9 +11,6 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(LIBS) $(TARGET) $^
 
-# $(OBJS): $(SOURCES)
-# 	$(CC) -c $(CFLAGS) -I $(INCLUDES) -o $@ $<
-
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/27 23:27:03 by knoda             #+#    #+#             */
+/*   Updated: 2020/06/28 16:42:48 by kazumanoda       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	*ft_memmove(void	*buf1, const void	*buf2, size_t n)
+void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 {
-	char			*str1;
-	char			*str2;
-	unsigned long	i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
 	str1 = (char	*)buf1;
 	str2 = (char	*)buf2;

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/27 23:27:58 by knoda             #+#    #+#             */
+/*   Updated: 2020/06/28 16:49:05 by kazumanoda       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		split;
@@ -23,5 +35,5 @@ char	**ft_split(char const	*s, char	c)
 			s++;
 	}
 	res[split] = NULL;
-	return	(res);
+	return (res);
 }
