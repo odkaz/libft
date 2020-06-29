@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:30:27 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 17:12:16 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/06/29 01:42:38 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void			*ft_memmove(void *buf1, const void *buf2, size_t n);
 void			*ft_memchr(const void *buf, int ch, size_t n);
 int				ft_memcmp(const void *buf1, const void *buf2, size_t n);
 int				ft_strlen(const char *str);
-unsigned long	ft_strlcpy(char *s1, char *s2, unsigned long size);
-unsigned long	ft_strlcat(char *s1, const char *s2, unsigned long size);
+size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+size_t			ft_strlcat(char *s1, const char *s2, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);

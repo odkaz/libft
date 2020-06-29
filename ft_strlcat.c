@@ -6,32 +6,26 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:44 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:49:40 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/06/29 03:56:42 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlcat(char *s1, const char *s2, unsigned long size)
-{
-	unsigned long	i;
-	unsigned long	cnt;
+#include "libft.h"
 
-	i = 0;
-	cnt = 0;
-	while (s1[i] != '\0')
+unsigned long	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	len;
+
+	len = ft_strlen(dst);
+	if (len > size)
+		return (size);
+	else if (len + 1 < size)
 	{
-		i++;
-	}
-	while (s2[cnt] != '\0')
-	{
-		if ((i + cnt) < (size - 1))
+		while (*src && len + 1 < size)
 		{
-			s1[i + cnt] = s2[cnt];
+			dst[len++] = *src++;
 		}
-		else if ((i + cnt) == (size - 1))
-		{
-			s1[i + cnt] = '\0';
-		}
-		cnt++;
+		dst[len] = '\0';
 	}
-	return (i + cnt);
+	return (len + (size_t)ft_strlen(src));
 }

@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:29:08 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:44:14 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/06/29 00:54:58 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 != '\0' && n > 0)
+	unsigned char	*str1;
+	unsigned char	*str2;
+
+	str1 = (unsigned char	*)s1;
+	str2 = (unsigned char	*)s2;
+	while (*str1 && *str2 && n > 0)
 	{
-		if (*s1 > *s2)
-		{
-			return (1);
-		}
-		else if (*s1 < *s2)
-		{
-			return (-1);
-		}
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 		n--;
 	}
+	if (*str1 != *str2)
+		return (*str1 - *str2);
 	return (0);
 }
