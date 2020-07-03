@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:16 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:50:02 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/06/30 06:33:48 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strdup(const char *s)
 	char	*res;
 	int		len;
 
-	len = 0;
-	res = (char	*)malloc(sizeof(char) * len);
+	len = ft_strlen(s);
+	res = (char	*)malloc(sizeof(char) * (len + 1));
 	if (res == NULL)
 		return (NULL);
 	while (s[len] != '\0')

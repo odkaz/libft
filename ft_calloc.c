@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:25:06 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/29 04:19:06 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/03 00:34:28 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t n, size_t size)
 	res = (void	*)malloc(size * n);
 	if (res != NULL)
 	{
-		ft_bzero(res, n);
+		ft_bzero(res, size * n);
 	}
 	return (res);
 }

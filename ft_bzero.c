@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:24:56 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/29 04:21:36 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/03 00:25:57 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*str;
+	unsigned char	*str;
 
-	i = 0;
-	str = (char	*)s;
-	while (i < n)
+	str = (unsigned char	*)s;
+	while (n--)
 	{
-		str[i] = 0;
-		i++;
+		*str++ = 0;
 	}
 }
