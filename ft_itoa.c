@@ -6,13 +6,13 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:26:18 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/04 03:48:43 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 20:32:32 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		mallen(int n)
+static int	mallen(int n)
 {
 	int		len;
 	long	ln;
@@ -35,7 +35,7 @@ int		mallen(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*res;
 	int		i;

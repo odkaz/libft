@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:16 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/30 06:33:48 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 18:24:10 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,10 @@
 char	*ft_strdup(const char *s)
 {
 	char	*res;
-	int		len;
 
-	len = ft_strlen(s);
-	res = (char	*)malloc(sizeof(char) * (len + 1));
-	if (res == NULL)
+	res = (char	*)ft_calloc((ft_strlen(s) + 1), sizeof(char));
+	if (!res)
 		return (NULL);
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	res[len] = '\0';
-	while (--len >= 0)
-	{
-		res[len] = s[len];
-	}
+	ft_strlcpy(res, s, ft_strlen(s) + 1);
 	return (res);
 }

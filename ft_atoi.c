@@ -6,26 +6,22 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:24:30 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:58:19 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 20:31:55 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v')
-	{
 		return (1);
-	}
 	if (c == '\f' || c == '\r' || c == ' ')
-	{
 		return (1);
-	}
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int	res;
 	int	sign;

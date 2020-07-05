@@ -6,15 +6,13 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:30:04 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:44:44 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 18:12:52 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
 		return (c += ('A' - 'a'));
-	}
 	return (c);
 }

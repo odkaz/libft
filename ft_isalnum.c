@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:25:27 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:41:44 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 11:32:35 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-	{
-		return (1);
-	}
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

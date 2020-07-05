@@ -6,15 +6,11 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:26:06 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:42:04 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 11:35:14 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= 32 && c <= 126);
 }

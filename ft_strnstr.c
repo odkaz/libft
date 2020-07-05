@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:29:17 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/29 04:09:49 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 19:25:57 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,12 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-
-	if (*little == '\0')
+	if (!*little)
 		return ((char	*)big);
-	while (*big && len > 0)
+	while (*big && (int)len >= ft_strlen(little))
 	{
-		i = 0;
-		while (big[i] == little[i])
-		{
-			if (little[i + 1] == '\0' && i < len)
-			{
-				return ((char	*)big);
-			}
-			i++;
-		}
+		if (ft_strncmp(big, little, ft_strlen(little)) == 0)
+			return ((char	*)big);
 		big++;
 		len--;
 	}

@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:27:58 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/03 16:16:37 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 19:41:41 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,19 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	int		i;
 
-	res = (char	**)malloc(sizeof(char	*) * ((ft_strlen(s) / 2 + 1) + 1));
-	if (res == NULL)
+	res = (char	**)ft_calloc(((ft_strlen(s) / 2 + 1) + 1), sizeof(char	*));
+	if (!res)
 		return (NULL);
 	index = 0;
-	while (*s != '\0' && res != NULL)
+	while (*s)
 	{
 		i = 0;
-		while (ft_memchr(s, c, i + 1) == NULL && s[i] != '\0')
+		while (!ft_memchr(s, c, i + 1) && s[i])
 			i++;
 		if (i > 0)
-		{
-			res[index] = ft_substr(s, 0, i);
-			index++;
-			s += i;
-		}
-		while (*s == c && *s != '\0')
+			res[index++] = ft_substr(s, 0, i);
+		s += i;
+		while (*s == c && *s)
 			s++;
 	}
 	res[index] = NULL;

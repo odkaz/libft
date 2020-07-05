@@ -6,15 +6,11 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:25:58 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:42:01 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/05 11:35:00 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= '0' && c <= '9');
 }
