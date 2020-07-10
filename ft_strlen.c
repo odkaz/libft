@@ -6,11 +6,13 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:40:58 by knoda             #+#    #+#             */
-/*   Updated: 2020/06/28 16:44:01 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/10 21:28:24 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

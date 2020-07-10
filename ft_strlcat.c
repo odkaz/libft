@@ -6,20 +6,20 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:44 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 17:54:25 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/10 22:11:29 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 
 	len = ft_strlen(dst);
 	if (len + 1 > size)
 	{
-		return (size + (size_t)ft_strlen(src));
+		return (size + ft_strlen(src));
 	}
 	else if (len + 1 < size)
 	{
@@ -29,5 +29,5 @@ unsigned long	ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		dst[len] = '\0';
 	}
-	return (len + (size_t)ft_strlen(src));
+	return (len + ft_strlen(src));
 }

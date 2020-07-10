@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:24:30 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 20:31:55 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/10 22:06:40 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ int			ft_atoi(const char *str)
 		str++;
 	if (*str == '+')
 		str++;
+	else if (ft_strncmp(str, "-2147483648", 11) == 0 && !ft_isdigit(str[11]))
+	{
+		return (-2147483648);
+	}
 	else if (*str == '-')
 	{
 		str++;

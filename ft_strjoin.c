@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:25 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 18:24:22 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/10 22:10:43 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		len;
+	size_t	len;
 	char	*res;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
