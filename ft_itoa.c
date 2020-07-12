@@ -6,7 +6,7 @@
 /*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:26:18 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 20:32:32 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2020/07/11 21:33:37 by kazumanoda       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@ static int	mallen(int n)
 	if (n == 0)
 		return (2);
 	len = 1;
-	if (n < 0)
+	ln = (long)n;
+	if (ln < 0)
 	{
-		ln = -n;
+		ln *= -1;
 		len++;
 	}
-	else
-		ln = n;
 	while (ln >= 1)
 	{
 		ln /= 10;

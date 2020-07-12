@@ -19,7 +19,6 @@ $(NAME): $(OBJS)
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 
-.PHONY: all clean fclean re
 clean:
 	rm -f $(OBJS)
 
@@ -27,3 +26,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
