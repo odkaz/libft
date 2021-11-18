@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*   By: knoda <knoda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:27:58 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/10 21:36:27 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2021/11/18 14:01:59 by knoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,13 @@ static void	*free_all(char **res, int index)
 	return (NULL);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		index;
 	int		i;
 
-	if (!(res = (char	**)ft_calloc(cnt_mal(s, c), sizeof(char	*))))
-		return (NULL);
+	res = (char **)ft_calloc(cnt_mal(s, c), sizeof(char *));
 	index = 0;
 	while (*s)
 	{
@@ -58,7 +57,8 @@ char		**ft_split(char const *s, char c)
 			i++;
 		if (i > 0)
 		{
-			if (!(res[index] = ft_substr(s, 0, i)))
+			res[index] = ft_substr(s, 0, i);
+			if (!res[index])
 				return (free_all(res, index));
 			index++;
 			s += i;

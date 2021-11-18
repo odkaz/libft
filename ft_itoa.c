@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*   By: knoda <knoda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:26:18 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/11 21:33:37 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2021/11/18 13:50:00 by knoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ static int	mallen(int n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*res;
 	int		i;
 	long	div;
 	long	ln;
 
-	res = (char	*)ft_calloc(mallen(n), sizeof(char));
+	res = (char *)ft_calloc(mallen(n), sizeof(char));
 	if (res == NULL)
 		return (NULL);
 	i = 0;

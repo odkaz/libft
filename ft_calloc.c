@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*   By: knoda <knoda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:25:06 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 11:31:59 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2021/11/18 13:49:37 by knoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	void	*res;
 
-	res = (void	*)malloc(size * n);
+	res = (void *)malloc(size * n);
 	if (res)
 		ft_bzero(res, size * n);
 	return (res);

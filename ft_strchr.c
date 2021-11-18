@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kazumanoda <kazumanoda@student.42.fr>      +#+  +:+       +#+        */
+/*   By: knoda <knoda@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:28:06 by knoda             #+#    #+#             */
-/*   Updated: 2020/07/05 11:58:40 by kazumanoda       ###   ########.fr       */
+/*   Updated: 2021/11/18 13:51:46 by knoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s != '\0')
 	{
 		if (*s == c)
-			return ((char	*)s);
+			return ((char *)s);
 		s++;
 	}
 	if (c == '\0')
-		return ((char	*)s);
+		return ((char *)s);
 	return (NULL);
 }
